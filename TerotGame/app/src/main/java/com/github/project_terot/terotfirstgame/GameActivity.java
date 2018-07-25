@@ -8,6 +8,7 @@ public class GameActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        //only landscape
         setContentView(R.layout.activity_game);
     }
 }
