@@ -3,4 +3,7 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="about_game"> <b> ABOUT GAME   </b> <br/> <i> \nGame is still in the process of development. Thank you. </i> </string>
+    <string name="about_author"> <b> ABOUT AUTHOR  </b> <br/> <i> \nAuthor is still in the process of developing game. Thank you. </i> </string>
 </resources>
