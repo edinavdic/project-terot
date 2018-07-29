@@ -7,10 +7,20 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
-public class MainActivity extends Activity implements MainAboutFragment.OnMainAboutFragmentInteractionListener, MainMenuFragment.OnMainMenuFragmentInteractionListener {
+public class MainActivity extends Activity implements MainPlayFragment.OnMainPlayFragmentInteractionListener, MainAboutFragment.OnMainAboutFragmentInteractionListener, MainMenuFragment.OnMainMenuFragmentInteractionListener {
+    @Override
+    public void onPickButtonClick(int pickCode) {
+        // MainPlayFragment interface
+    }
+
     @Override
     public void onPlayButtonClick() {
         // MainMenuFragment interface
+        FragmentManager fragmentManager = getFragmentManager();
+        MainPlayFragment playFrag = MainPlayFragment.newInstance();
+        FragmentTransaction transaction = fragmentManager.beginTransaction();
+        transaction.replace(R.id.frameLayout, playFrag, "Play").addToBackStack(null);
+        transaction.commit();
     }
 
     @Override
@@ -21,7 +31,6 @@ public class MainActivity extends Activity implements MainAboutFragment.OnMainAb
         FragmentTransaction transaction = fragmentManager.beginTransaction();
         transaction.replace(R.id.frameLayout, aboutFrag, "About").addToBackStack(null);
         transaction.commit();
-
     }
 
     @Override
@@ -35,7 +44,7 @@ public class MainActivity extends Activity implements MainAboutFragment.OnMainAb
         super.onCreate(savedInstanceState);
         // only portrait view in this activity
 
-        // hide the status bar
+        // hides the status bar
         View decorView = getWindow().getDecorView();
         int uiOptions = View.SYSTEM_UI_FLAG_FULLSCREEN;
         decorView.setSystemUiVisibility(uiOptions);
