@@ -51,7 +51,7 @@ public class CustomAdapterSelection extends RecyclerView.Adapter<CustomAdapterSe
         String spritePath = pu.getDrawablePngPath();
         String buttonColorPath = "button_" + pu.getPantheraiColor().toString().toLowerCase();
         holder.pImageViewSprite.setImageResource(getImageId(context, spritePath));
-        holder.pImageButtonColor.setImageResource(getImageId(context, buttonColorPath));
+        holder.pImageViewColor.setImageResource(getImageId(context, buttonColorPath));
         switch (pu.getPantheraiColor()){
             case RED: holder.pType.setText("Taiger"); break;
             case BLUE: holder.pType.setText("Snow Leopaird"); break;
@@ -72,7 +72,7 @@ public class CustomAdapterSelection extends RecyclerView.Adapter<CustomAdapterSe
     public class ViewHolder extends RecyclerView.ViewHolder{
 
         public ImageView pImageViewSprite;
-        public ImageButton pImageButtonColor;
+        public ImageView pImageViewColor;
         public TextView pType;
         public TextView pStats;
 
@@ -81,8 +81,8 @@ public class CustomAdapterSelection extends RecyclerView.Adapter<CustomAdapterSe
 
             pType = (TextView) itemView.findViewById(R.id.textViewType);
             pStats = (TextView) itemView.findViewById(R.id.textViewStats);
-            pImageButtonColor = (ImageButton ) itemView.findViewById(R.id.imageButtonColor);
-            pImageViewSprite = (ImageView ) itemView.findViewById(R.id.imageViewSprite);
+            pImageViewColor = (ImageView) itemView.findViewById(R.id.imageViewColor);
+            pImageViewSprite = (ImageView) itemView.findViewById(R.id.imageViewSprite);
 
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override

@@ -33,6 +33,7 @@ public class MainPlayFragment extends Fragment  {
     private int pickedCode;
 
     ImageButton imageButtonPick;
+    ImageButton imageButtonBack;
     RecyclerView recyclerViewPantherai;
     CustomAdapterSelection customAdapter;
     RecyclerView.LayoutManager layoutManager;
@@ -40,6 +41,7 @@ public class MainPlayFragment extends Fragment  {
 
     public interface OnMainPlayFragmentInteractionListener {
         void onPickButtonClick(int pickCode);
+        void onBackButtonClick();
     }
     private OnMainPlayFragmentInteractionListener mListener;
 
@@ -68,7 +70,11 @@ public class MainPlayFragment extends Fragment  {
         ArrayList<Pantherai> list = new ArrayList<>();
         list.add(new Taiger()); list.add(new Laion()); list.add(new Jaguair()); list.add(new SnowLeopaird()); list.add(new Leopaird());
         //
+
+        pickedCode = -1;
+
         imageButtonPick = (ImageButton) rootView.findViewById(R.id.imageButtonPick);
+        imageButtonBack = (ImageButton) rootView.findViewById(R.id.imageButtonBack);
         recyclerViewPantherai = (RecyclerView) rootView.findViewById(R.id.recyclerViewPantherai);
         layoutManager = new LinearLayoutManager(getActivity());
         customAdapter = new CustomAdapterSelection(getActivity(), list, new CustomAdapterSelection.OnAdapterClickListener(){
@@ -82,6 +88,25 @@ public class MainPlayFragment extends Fragment  {
 
         recyclerViewPantherai.setLayoutManager(layoutManager);
         recyclerViewPantherai.setAdapter(customAdapter);
+
+
+        imageButtonBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                mListener.onBackButtonClick();
+            }
+        });
+
+        imageButtonPick.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                if(pickedCode != -1)
+                    mListener.onPickButtonClick(pickedCode);
+                //TODO : dodati neko upozorenje kada nije izabrano 'else'
+            }
+        });
 
         return rootView;
     }

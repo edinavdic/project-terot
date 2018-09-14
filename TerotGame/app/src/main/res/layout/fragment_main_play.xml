@@ -10,7 +10,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:weightSum="7"
+        android:weightSum="8"
         android:orientation="vertical">
 
         <android.support.v7.widget.RecyclerView
@@ -26,12 +26,24 @@
             android:layout_width="match_parent"
             android:layout_height="56dp"
             android:layout_marginBottom="5dp"
-            android:layout_weight="0"
+            android:layout_weight="1"
             android:adjustViewBounds="true"
             android:padding="0dp"
             android:background="@drawable/background_color"
             android:scaleType="fitCenter"
             android:src="@drawable/button_pick" />
+
+        <ImageButton
+            android:id="@+id/imageButtonBack"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginBottom="5dp"
+            android:layout_weight="1"
+            android:adjustViewBounds="true"
+            android:padding="0dp"
+            android:background="@drawable/background_color"
+            android:scaleType="fitCenter"
+            android:src="@drawable/button_back" />
 
     </LinearLayout>
 </FrameLayout>

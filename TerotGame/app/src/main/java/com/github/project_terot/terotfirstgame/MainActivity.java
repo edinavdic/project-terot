@@ -11,6 +11,7 @@ public class MainActivity extends Activity implements MainPlayFragment.OnMainPla
     @Override
     public void onPickButtonClick(int pickCode) {
         // MainPlayFragment interface
+        //TODO: primiti pickCode, popati fragmente, prebaciti se u novu aktivnost i poslati taj picked code
     }
 
     @Override
@@ -35,7 +36,7 @@ public class MainActivity extends Activity implements MainPlayFragment.OnMainPla
 
     @Override
     public void onBackButtonClick() {
-        // MainAboutFragment interface
+        // MainAboutFragment interface, MainPlayFragment interface
         getFragmentManager().popBackStack();
     }
 

@@ -36,16 +36,16 @@
             android:text="Stats\nStats\nStats" />
     </LinearLayout>
 
-    <ImageButton
-        android:id="@+id/imageButtonColor"
+    <ImageView
+        android:id="@+id/imageViewColor"
         android:layout_width="50dp"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:layout_marginTop="15dp"
-        android:adjustViewBounds="true"
-        android:padding="0dp"
         android:layout_marginRight="2dp"
+        android:layout_marginTop="15dp"
+        android:layout_weight="1"
+        android:adjustViewBounds="true"
         android:background="@drawable/background_color"
+        android:padding="0dp"
         android:scaleType="fitCenter"
         app:srcCompat="@drawable/button_red" />
 </LinearLayout>
