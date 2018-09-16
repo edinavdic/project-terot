@@ -1,6 +1,8 @@
 package com.github.project_terot.terotfirstgame.models;
 
-public abstract class Pantherai {
+import java.io.Serializable;
+
+public abstract class Pantherai implements Serializable {
 
     private int strength, dexterity, intelligence;
     private String drawablePngPath;

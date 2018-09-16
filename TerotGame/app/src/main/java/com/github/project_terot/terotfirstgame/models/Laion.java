@@ -1,6 +1,8 @@
 package com.github.project_terot.terotfirstgame.models;
 
-public class Laion extends Pantherai {
+import java.io.Serializable;
+
+public class Laion extends Pantherai implements Serializable {
 
     private static final int L_STR = 15;
     private static final int L_DEX = 15;

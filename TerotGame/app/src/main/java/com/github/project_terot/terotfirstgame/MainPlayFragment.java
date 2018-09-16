@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -26,9 +27,9 @@ public class MainPlayFragment extends Fragment  {
 
     private static final int LAION = 0;
     private static final int TAIGER = 1;
+    private static final int JAGUAIR = 2;
     private static final int SNOW_LEOPAIRD = 3;
     private static final int LEOPAIRD = 4;
-    private static final int JAGUAIR = 2;
 
     private int pickedCode;
 
@@ -82,7 +83,6 @@ public class MainPlayFragment extends Fragment  {
             public void onItemClick(int pickCode) {
                 // CustomAdapterSelection interface
                 pickedCode = pickCode;
-                // TODO : Dodati BACK | PICK | ChoosenColorButton
             }
         });
 
@@ -104,8 +104,11 @@ public class MainPlayFragment extends Fragment  {
 
                 if(pickedCode != -1)
                     mListener.onPickButtonClick(pickedCode);
-                //TODO : dodati neko upozorenje kada nije izabrano 'else'
-            }
+                else {
+                    Toast t = Toast.makeText(getActivity(), "Character not selected!", Toast.LENGTH_SHORT);
+                    t.setGravity(Gravity.BOTTOM | Gravity.LEFT,0,0);
+                    t.show();
+            }   }
         });
 
         return rootView;

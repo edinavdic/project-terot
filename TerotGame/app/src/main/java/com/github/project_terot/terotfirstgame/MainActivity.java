@@ -3,6 +3,7 @@ package com.github.project_terot.terotfirstgame;
 import android.app.Activity;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -11,6 +12,13 @@ public class MainActivity extends Activity implements MainPlayFragment.OnMainPla
     @Override
     public void onPickButtonClick(int pickCode) {
         // MainPlayFragment interface
+
+        // dal skidati sve sa steka prilikom prelaza u drugu aktivnost, provjeriti!
+
+        Intent myIntent = new Intent(this, GameActivity.class);
+        myIntent.putExtra("PICKED_CODE", pickCode);
+        startActivity(myIntent);
+        //finish(); ucini da iz druge aktivnosti kad se klikne back izadje iz aplikacije(tjst, ova aktivnost prestaje sa radom)
         //TODO: primiti pickCode, popati fragmente, prebaciti se u novu aktivnost i poslati taj picked code
     }
 

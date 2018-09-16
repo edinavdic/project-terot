@@ -1,6 +1,8 @@
 package com.github.project_terot.terotfirstgame.models;
 
-public class Jaguair extends Pantherai {
+import java.io.Serializable;
+
+public class Jaguair extends Pantherai implements Serializable {
 
     private static final int J_STR = 15;
     private static final int J_DEX = 15;

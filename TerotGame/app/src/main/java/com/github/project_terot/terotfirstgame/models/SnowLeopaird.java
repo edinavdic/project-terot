@@ -1,6 +1,8 @@
 package com.github.project_terot.terotfirstgame.models;
 
-public class SnowLeopaird extends Pantherai {
+import java.io.Serializable;
+
+public class SnowLeopaird extends Pantherai implements Serializable {
 
     private static final int S_STR = 15;
     private static final int S_DEX = 15;

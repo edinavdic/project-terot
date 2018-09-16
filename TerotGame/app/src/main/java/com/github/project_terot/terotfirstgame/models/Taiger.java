@@ -1,6 +1,8 @@
 package com.github.project_terot.terotfirstgame.models;
 
-public class Taiger extends Pantherai {
+import java.io.Serializable;
+
+public class Taiger extends Pantherai implements Serializable {
 
     private static final int R_STR = 15;
     private static final int R_DEX = 15;

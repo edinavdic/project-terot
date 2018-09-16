@@ -1,6 +1,8 @@
 package com.github.project_terot.terotfirstgame.models;
 
-public class Leopaird extends Pantherai {
+import java.io.Serializable;
+
+public class Leopaird extends Pantherai implements Serializable {
 
     private static final int L_STR = 15;
     private static final int L_DEX = 15;
