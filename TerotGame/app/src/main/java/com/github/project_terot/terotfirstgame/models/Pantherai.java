@@ -17,6 +17,12 @@ public abstract class Pantherai implements Serializable {
         this.pantheraiColor = pantheraiColor;
     }
 
+    public int incStrength() { return ++strength; }
+
+    public int incDexterity() { return ++dexterity; }
+
+    public int incIntelligence() { return ++intelligence; }
+
     public int getStrength() {
         return strength;
     }

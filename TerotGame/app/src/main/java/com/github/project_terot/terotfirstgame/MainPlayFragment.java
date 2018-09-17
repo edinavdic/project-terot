@@ -47,6 +47,7 @@ public class MainPlayFragment extends Fragment  {
     private OnMainPlayFragmentInteractionListener mListener;
 
 
+    ArrayList<Pantherai> list;
 
     public MainPlayFragment() {
         // Required empty public constructor
@@ -59,6 +60,13 @@ public class MainPlayFragment extends Fragment  {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        //test values
+        list = new ArrayList<>();
+        list.add(new Taiger()); list.add(new Laion());
+        list.add(new Jaguair()); list.add(new SnowLeopaird());
+        list.add(new Leopaird());
+        //
+        pickedCode = -1;
     }
 
     @Override
@@ -66,13 +74,6 @@ public class MainPlayFragment extends Fragment  {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View rootView = inflater.inflate(R.layout.fragment_main_play, container, false);
-
-        //test values
-        ArrayList<Pantherai> list = new ArrayList<>();
-        list.add(new Taiger()); list.add(new Laion()); list.add(new Jaguair()); list.add(new SnowLeopaird()); list.add(new Leopaird());
-        //
-
-        pickedCode = -1;
 
         imageButtonPick = (ImageButton) rootView.findViewById(R.id.imageButtonPick);
         imageButtonBack = (ImageButton) rootView.findViewById(R.id.imageButtonBack);
@@ -101,7 +102,6 @@ public class MainPlayFragment extends Fragment  {
         imageButtonPick.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 if(pickedCode != -1)
                     mListener.onPickButtonClick(pickedCode);
                 else {
