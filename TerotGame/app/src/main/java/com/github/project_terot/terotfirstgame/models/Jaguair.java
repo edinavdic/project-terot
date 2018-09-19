@@ -5,8 +5,8 @@ import java.io.Serializable;
 public class Jaguair extends Pantherai implements Serializable {
 
     private static final int J_STR = 15;
-    private static final int J_DEX = 15;
-    private static final int J_INT = 15;
+    private static final int J_DEX = 16;
+    private static final int J_INT = 17;
     private static final String J_IMG = "jaguair_sprite";
     private static final Color J_COL = Color.GREEN;
 

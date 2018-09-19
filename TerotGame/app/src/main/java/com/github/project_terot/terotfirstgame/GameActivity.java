@@ -94,6 +94,9 @@ public class GameActivity extends Activity implements GameWinFragment.OnGameWinF
     @Override
     public void onLoseInteraction() {
         // GameCombatFragment interface
+        Intent myIntent = new Intent(this, MainActivity.class);
+        startActivity(myIntent);
+        finish();
     }
 
     private ArrayList<Pantherai> activeOpponents;

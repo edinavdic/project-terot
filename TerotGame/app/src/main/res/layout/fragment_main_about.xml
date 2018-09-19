@@ -14,22 +14,6 @@
         android:orientation="vertical"
         tools:weightSum="7">
 
-        <TextView
-            android:id="@+id/textViewAboutGame"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="5dp"
-            android:layout_weight="3"
-            android:text="@string/about_game" />
-
-        <TextView
-            android:id="@+id/textViewAboutAuthor"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="5dp"
-            android:layout_weight="3"
-            android:text="@string/about_author" />
-
         <ImageButton
             android:id="@+id/imageButtonBack"
             android:layout_width="match_parent"

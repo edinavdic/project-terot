@@ -7,26 +7,202 @@
     tools:context=".GameCombatFragment">
 
     <LinearLayout
-        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-        <TextView
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="For now. Combat will be added. Win or Lose?"/>
+            android:layout_height="400dp"
+            android:layout_weight="0.8"
+            android:orientation="horizontal">
 
-        <Button
-            android:id="@+id/buttonWin"
-            android:text="WIN"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            <LinearLayout
+                android:id="@+id/linearLayoutPlayer"
+                android:layout_width="150dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.2"
+                android:orientation="vertical">
 
-        <Button
-            android:id="@+id/buttonLose"
-            android:text="LOSE"
+                <ImageView
+                    android:id="@+id/imageViewPlayerSprite"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_weight="0.4"
+                    android:src="@drawable/leopaird_sprite"
+                    android:padding="0dp"
+                    android:scaleType="fitCenter"
+                    android:layout_marginRight="2dp"
+                    android:layout_marginTop="3dp"
+                    android:adjustViewBounds="true"
+                    android:background="@drawable/background_color"/>
+
+                <TextView
+                    android:id="@+id/textViewPlayerStats"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_weight="0.4"
+                    android:text="STR: 15\nDEX: 15\nINT: 15" />
+
+                <ImageButton
+                    android:id="@+id/imageButtonBattle"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_weight="0.2"
+                    android:src="@drawable/button_next_turn"
+                    android:padding="0dp"
+                    android:scaleType="fitCenter"
+                    android:layout_marginEnd="2dp"
+                    android:layout_marginTop="3dp"
+                    android:adjustViewBounds="true"
+                    android:background="@drawable/background_color"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textViewScreen"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="0.6"
+                android:text="MATCH IS GOING ON!"
+                android:textSize="16dp" />
+
+
+            <LinearLayout
+                android:id="@+id/linearLayoutOpponent"
+                android:layout_width="150dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.2"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/imageViewOpponentSprite"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_weight="0.4"
+                    android:src="@drawable/leopaird_sprite"
+                    android:padding="0dp"
+                    android:scaleType="fitCenter"
+                    android:layout_marginRight="2dp"
+                    android:layout_marginTop="3dp"
+                    android:adjustViewBounds="true"
+                    android:background="@drawable/background_color"/>
+
+                <TextView
+                    android:id="@+id/textViewOpponentStats"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_weight="0.4"
+                    android:text="STR: 15\nDEX: 15\nINT: 15"
+                    android:padding="0dp"
+                    android:scaleType="fitCenter"
+                    android:layout_marginRight="2dp"
+                    android:layout_marginTop="3dp"
+                    android:adjustViewBounds="true"
+                    android:background="@drawable/background_color"/>
+
+                <ImageView
+                    android:id="@+id/imageViewOpponentColor"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_weight="0.2"
+                    android:src="@drawable/button_orange"
+                    android:padding="0dp"
+                    android:scaleType="fitCenter"
+                    android:layout_marginRight="2dp"
+                    android:layout_marginTop="3dp"
+                    android:adjustViewBounds="true"
+                    android:background="@drawable/background_color"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="100dp"
+            android:layout_weight="0.2"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/imageButtonChangeDef"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="0.1"
+                android:src="@drawable/button_change_def"
+                android:padding="0dp"
+                android:scaleType="fitCenter"
+                android:layout_marginRight="2dp"
+                android:layout_marginTop="3dp"
+                android:adjustViewBounds="true"
+                android:background="@drawable/background_color"/>
+
+            <ImageView
+                android:id="@+id/imageViewDefColor"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="0.22"
+                android:src="@drawable/button_green"
+                android:padding="0dp"
+                android:scaleType="fitCenter"
+                android:layout_marginRight="2dp"
+                android:layout_marginTop="3dp"
+                android:adjustViewBounds="true"
+                android:background="@drawable/background_color"/>
+
+            <ImageButton
+                android:id="@+id/imageButtonChangeMid"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="0.1"
+                android:src="@drawable/button_change_mid"
+                android:padding="0dp"
+                android:scaleType="fitCenter"
+                android:layout_marginRight="2dp"
+                android:layout_marginTop="3dp"
+                android:adjustViewBounds="true"
+                android:background="@drawable/background_color"/>
+
+            <ImageView
+                android:id="@+id/imageViewMidColor"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="0.22"
+                android:src="@drawable/button_green"
+                android:padding="0dp"
+                android:scaleType="fitCenter"
+                android:layout_marginRight="2dp"
+                android:layout_marginTop="3dp"
+                android:adjustViewBounds="true"
+                android:background="@drawable/background_color"/>
+
+            <ImageButton
+                android:id="@+id/imageButtonChangeAtk"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="0.1"
+                android:src="@drawable/button_change_atk"
+                android:padding="0dp"
+                android:scaleType="fitCenter"
+                android:layout_marginRight="2dp"
+                android:layout_marginTop="3dp"
+                android:adjustViewBounds="true"
+                android:background="@drawable/background_color"/>
+
+            <ImageView
+                android:id="@+id/imageViewAtkColor"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="0.24"
+                android:src="@drawable/button_green"
+                android:padding="0dp"
+                android:scaleType="fitCenter"
+                android:layout_marginRight="2dp"
+                android:layout_marginTop="3dp"
+                android:adjustViewBounds="true"
+                android:background="@drawable/background_color"/>
+
+        </LinearLayout>
     </LinearLayout>
 
 </FrameLayout>

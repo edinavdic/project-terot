@@ -7,7 +7,7 @@ public abstract class Ability {
     // static class
     public static class AbilityColorCalculator {
 
-        private static double coeffMat[][] = {
+        public static double coeffMat[][] = {
                 {1, 1, 1.5, 2, 1},
                 {1.5, 1, 1, 1, 2},
                 {1, 2, 1, 1, 1.5},
