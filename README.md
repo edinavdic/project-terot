@@ -1,2 +1,2 @@
 # project-terot
-## game by Edin Avdić
+## app/game by Edin Avdić
