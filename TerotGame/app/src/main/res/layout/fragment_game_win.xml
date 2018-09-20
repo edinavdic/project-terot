@@ -8,27 +8,28 @@
 
     <LinearLayout
         android:orientation="vertical"
+        android:weightSum="1"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="64dp"
-            android:textSize="10pt"
-            android:text="You Won!\nUpdate stats by 1 point: " />
+            android:text="You Won!\nUpdate stats by 1 point: "
+            android:textSize="10pt" />
 
         <LinearLayout
-            android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="45dp"
+            android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/textViewStrength"
                 android:layout_width="100dp"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
-                android:textSize="8pt"
-                android:text="STR: 15" />
+                android:text="STR: 15"
+                android:textSize="8pt" />
 
             <ImageButton
                 android:id="@+id/imageButtonAddStrength"
@@ -37,25 +38,26 @@
                 android:layout_marginRight="2dp"
                 android:layout_marginTop="3dp"
                 android:adjustViewBounds="true"
-                android:gravity="center"
                 android:background="@drawable/background_color"
-                android:src="@drawable/button_plus"
+                android:gravity="center"
                 android:padding="0dp"
-                android:scaleType="fitCenter" />
+                android:scaleType="fitCenter"
+                android:src="@drawable/button_plus" />
 
         </LinearLayout>
+
         <LinearLayout
-            android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="45dp"
+            android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/textViewDexterity"
                 android:layout_width="100dp"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
-                android:textSize="8pt"
-                android:text="DEX: 15" />
+                android:text="DEX: 15"
+                android:textSize="8pt" />
 
             <ImageButton
                 android:id="@+id/imageButtonAddDexterity"
@@ -64,25 +66,26 @@
                 android:layout_marginRight="2dp"
                 android:layout_marginTop="3dp"
                 android:adjustViewBounds="true"
-                android:gravity="center"
                 android:background="@drawable/background_color"
-                android:src="@drawable/button_plus"
+                android:gravity="center"
                 android:padding="0dp"
-                android:scaleType="fitCenter" />
+                android:scaleType="fitCenter"
+                android:src="@drawable/button_plus" />
 
         </LinearLayout>
+
         <LinearLayout
-            android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="45dp"
+            android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/textViewIntelligence"
                 android:layout_width="100dp"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
-                android:textSize="8pt"
-                android:text="INT: 15" />
+                android:text="INT: 15"
+                android:textSize="8pt" />
 
             <ImageButton
                 android:id="@+id/imageButtonAddIntelligence"
@@ -91,11 +94,11 @@
                 android:layout_marginRight="2dp"
                 android:layout_marginTop="3dp"
                 android:adjustViewBounds="true"
-                android:gravity="center"
                 android:background="@drawable/background_color"
-                android:src="@drawable/button_plus"
+                android:gravity="center"
                 android:padding="0dp"
-                android:scaleType="fitCenter" />
+                android:scaleType="fitCenter"
+                android:src="@drawable/button_plus" />
 
         </LinearLayout>
 
@@ -106,11 +109,11 @@
             android:layout_marginRight="8dp"
             android:layout_marginTop="8dp"
             android:adjustViewBounds="true"
-            android:gravity="center"
             android:background="@drawable/background_color"
-            android:src="@drawable/button_ok"
+            android:gravity="center"
             android:padding="0dp"
-            android:scaleType="fitCenter" />
+            android:scaleType="fitCenter"
+            android:src="@drawable/button_ok" />
 
     </LinearLayout>
 

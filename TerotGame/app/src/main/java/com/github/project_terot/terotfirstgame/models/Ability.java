@@ -15,8 +15,6 @@ public abstract class Ability {
                 {2, 1, 1, 1.5, 1}
         };
 
-        // TODO: public methods inside public nested class, maybe to use them in other classes
-
         public static ArrayList<Color> giveGoodAgainst(Color col){
             int idx = col.ordinal();
             ArrayList<Color> returnList = new ArrayList<>();
@@ -56,8 +54,8 @@ public abstract class Ability {
     }
 
 
-    // ovo sve suvisno ovdje, good i halfgood trebaju samo u ATK ability,--SIGURNO nece trebati jer ce se weak i halfWeak racunati na osnovu boje zivotinje a ne DEF argumenta-- weak i halfWeak u DEF( mada i to myb suvisno jer ce se preko ATK sve racunati), dok u MIDu ne treba
-    // ona nested klasa ce posluziti mozda u Pantherai
+    // ovo sve suvisno
+    // ona nested klasa ce posluziti mozda
     private Color abilityColor;
     private String colorImgPath;
     //private ArrayList<Color> goodAgainstList;

@@ -34,7 +34,7 @@ public class GameOpponentFragment extends Fragment {
 
     private ArrayList<Pantherai> activeOpponents;
     private Pantherai player;
-    // TODO:find best practice for seriazable or Parcable
+    // TODO:seriazable or Parcable
 
     //layout arguments
     ImageView imageViewPlayerSprite;
@@ -98,7 +98,7 @@ public class GameOpponentFragment extends Fragment {
         recyclerViewOpponents.setLayoutManager(layoutManager);
         recyclerViewOpponents.setAdapter(customAdapter);
 
-        // TODO: pripaziti kad ne bude vise opponenta da se ne poziva ovaj fragment u GameActivity
+        // kad ne bude vise opponenta da se ne poziva ovaj fragment u GameActivity
         imageButtonBattle.setImageResource(getImageId(getActivity(), "button_battle"));
         imageViewBattleColor.setImageResource(getImageId(getActivity(), "button_" + activeOpponents.get(0).getPantheraiColor().toString().toLowerCase()));
 

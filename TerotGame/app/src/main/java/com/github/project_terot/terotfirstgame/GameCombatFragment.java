@@ -1,20 +1,17 @@
 package com.github.project_terot.terotfirstgame;
 
 import android.content.Context;
-import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.github.project_terot.terotfirstgame.models.Ability;
-import com.github.project_terot.terotfirstgame.models.AbilityATK;
 import com.github.project_terot.terotfirstgame.models.Pantherai;
 
 import com.github.project_terot.terotfirstgame.models.Color;
@@ -39,8 +36,6 @@ public class GameCombatFragment extends Fragment {
 
     private Pantherai opponent;
     private Pantherai player;
-
-    // TODO: make combat playable!!!!
 
     // svi viewi potrebni!
     ImageView imageViewPlayerSprite, imageViewOpponentSprite, imageViewOpponentColor, imageViewDefColor
@@ -199,21 +194,17 @@ public class GameCombatFragment extends Fragment {
         return rootView;
     }
 
-    //main method
+    //work method
     private String turnCalculator(int numDef, int numMid, int numAtk){
         int numDefOp, numMidOp, numAtkOp;
         String screen = "";
         screen = screen + Color.getColor(numDef).toString() + " " + Color.getColor(numMid) + " " + Color.getColor(numAtk) + "\n";
-        //Ability abilityAtkPlayer = new AbilityATK(Color.getColor(numAtk), "");
-        //Ability abilityMidPlayer = new AbilityATK(Color.getColor(numMid), "");
-        //Ability abilityDefPlayer = new AbilityATK(Color.getColor(numDef), "");
+
         screen = screen + "vs.\n";
         Random rand = new Random();
         numDefOp = rand.nextInt(5); numMidOp = rand.nextInt(5); numAtkOp = rand.nextInt(5);
         screen = screen + Color.getColor(numDefOp).toString() + " " + Color.getColor(numMidOp) + " " + Color.getColor(numAtkOp) + "\n";
-        //Ability abilityAtkOpponent = new AbilityATK(Color.getColor(numAtk), "");
-        //Ability abilityMidOpponent = new AbilityATK(Color.getColor(numMid), "");
-        //Ability abilityDefOpponent = new AbilityATK(Color.getColor(numDef), "");
+
 
         Pantherai attacker, defender;
         double damageAttacker, damageDefender;

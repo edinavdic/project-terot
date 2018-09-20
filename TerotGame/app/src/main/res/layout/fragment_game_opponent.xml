@@ -18,7 +18,7 @@
             android:layout_height="match_parent"
             android:orientation="horizontal"
             android:layout_weight="1">
-            <!-- TODO: ubaciti sve protivnike -->
+
 
             <TextView
                 android:id="@+id/textViewOpponents"
@@ -44,7 +44,6 @@
             android:layout_height="match_parent"
             android:orientation="horizontal"
             android:layout_weight="1">
-            <!-- TODO: ubaciti igraca i BATTLE button -->
 
 
             <ImageView

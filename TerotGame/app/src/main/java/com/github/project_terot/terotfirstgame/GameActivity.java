@@ -38,7 +38,7 @@ public class GameActivity extends Activity implements GameWinFragment.OnGameWinF
         else
             player.incIntelligence();
 
-        //TODO: KADA dođe do nule sa opponentima napraviti izlaz iz IGRANJA
+        //out of gameActivity
         if(activeOpponents.size() > 0){
             Random rand = new Random();
             int j = rand.nextInt(3);
@@ -70,7 +70,7 @@ public class GameActivity extends Activity implements GameWinFragment.OnGameWinF
     public void onBattleButtonClick() {
         // GameOpponentFragment interface
         FragmentManager fragmentManager = getFragmentManager();
-        GameCombatFragment combatFrag = GameCombatFragment.newInstance(player, activeOpponents.get(0)); //TODO:paziti NULL!
+        GameCombatFragment combatFrag = GameCombatFragment.newInstance(player, activeOpponents.get(0)); // NULL!
         FragmentTransaction transaction = fragmentManager.beginTransaction();
         transaction.replace(R.id.frameLayout, combatFrag, "Combat");
         transaction.commit();
@@ -177,15 +177,7 @@ public class GameActivity extends Activity implements GameWinFragment.OnGameWinF
                 default: break;
             }
         }
-        /*
-        for(int i = 0; i < activeOpponents.size(); i++){
-            if(activeOpponents.get(i).getPantheraiColor().ordinal() == pickedCode){
-                player = activeOpponents.get(i);
-                activeOpponents.remove(i);
-                break;
-            }
-        }
-        */
+
     }
 
 

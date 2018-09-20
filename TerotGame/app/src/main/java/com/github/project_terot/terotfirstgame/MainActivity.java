@@ -13,12 +13,11 @@ public class MainActivity extends Activity implements MainPlayFragment.OnMainPla
     public void onPickButtonClick(int pickCode) {
         // MainPlayFragment interface
 
-        //TODO: dal skidati sve sa steka prilikom prelaza u drugu aktivnost, provjeriti!
 
         Intent myIntent = new Intent(this, GameActivity.class);
         myIntent.putExtra("PICKED_CODE", pickCode);
         startActivity(myIntent);
-        finish(); // ucini da iz druge aktivnosti kad se klikne back izadje iz aplikacije(tjst, ova aktivnost prestaje sa radom)
+        finish(); // ova aktivnost prestaje sa radom
     }
 
     @Override
